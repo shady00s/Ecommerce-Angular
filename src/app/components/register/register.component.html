@@ -1,0 +1,13 @@
+<form [formGroup]="ResgistrationForm"(ngSubmit)="onSubmit()">
+    <input type="text" placeholder="Name: "formControlName="userName"  />
+    <input type="email" placeholder="Email: " formControlName="useremail"/>
+    <input type="password" placeholder="Password: " formControlName="password"/>
+    <input type="password" placeholder="Confirm password: "  />
+  
+    <input type="checkbox" name="remember" id="remember"  formControlName="rememberMe"/>
+    <label for="remember">Remember me</label>
+  
+    <a routerLink="/login">Already have account?</a>
+    <button type="submit">Register</button>
+  </form>
+  

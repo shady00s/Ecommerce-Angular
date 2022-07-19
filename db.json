@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "userName": "shady",
+      "useremail": "ssk@test.com",
+      "password": "12345678",
+      "rememberMe": true,
+      "id": 1
+    }
+  ]
+}
