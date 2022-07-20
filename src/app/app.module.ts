@@ -10,6 +10,7 @@ import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { LogInComponent } from './components/login/login.component';
 import { HomepageComponent } from './components/main-master/homepage/homepage.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomepageAdvComponentComponent } from './components/homepage-adv-component/homepage-adv-component.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     NavBarComponent,
     FooterComponent,
-    HomepageComponent
+    HomepageComponent,
+    HomepageAdvComponentComponent
     
   ],
   imports: [
