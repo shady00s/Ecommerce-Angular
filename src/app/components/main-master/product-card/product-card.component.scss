@@ -1,0 +1,32 @@
+.productCard{
+    cursor: pointer;
+    padding: 1rem;
+    margin: 1rem;
+    width: 11rem;
+    height: 18rem;
+    border:1px solid rgba(203, 203, 203, 0.548);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3rem;
+    
+}
+.productCard:hover{
+    box-shadow: 1px 1px 2px rgba(117, 117, 117, 0.147);
+}
+.img{
+    width: 5rem;
+   margin: auto;
+}
+.img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.title{
+    width: 8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

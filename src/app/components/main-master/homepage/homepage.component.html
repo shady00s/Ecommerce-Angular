@@ -1,2 +1,9 @@
 <app-nav-bar></app-nav-bar>
 <app-homepage-adv-component></app-homepage-adv-component>
+<ng-container >
+    <h1 class="h1 m-3">Hot and new</h1>
+    <div class="d-flex flex-wrap">
+        <app-product-card *ngFor="let products of productsData;" [value]="products"></app-product-card>
+    </div>
+    
+</ng-container>

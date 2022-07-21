@@ -11,6 +11,8 @@ import { LogInComponent } from './components/login/login.component';
 import { HomepageComponent } from './components/main-master/homepage/homepage.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomepageAdvComponentComponent } from './components/homepage-adv-component/homepage-adv-component.component';
+import { ProductCardComponent } from './components/main-master/product-card/product-card.component';
+import { ProductDetailsComponent } from './components/main-master/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HomepageAdvComponentComponent } from './components/homepage-adv-compone
     NavBarComponent,
     FooterComponent,
     HomepageComponent,
-    HomepageAdvComponentComponent
+    HomepageAdvComponentComponent,
+    ProductCardComponent,
+    ProductDetailsComponent
     
   ],
   imports: [

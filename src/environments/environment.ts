@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  usersApiUrl:'http://localhost:5000/users'
+  usersApiUrl:'http://localhost:5000/users',
+  productsApi:'https://fakestoreapi.com/products',
+  categoriesApi:'https://fakestoreapi.com/products/categories'
 };
 
 /*
