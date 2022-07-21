@@ -1,0 +1,47 @@
+.options{
+    margin: 1rem;
+    width: 18%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cart, .profile{
+    padding:0.4rem 0.9rem;
+    margin: 0.2rem 1.3rem;
+    border-radius: 0.3rem;
+    width: 6rem;
+    color: black; 
+    background-color: transparent;
+    transition: all .3s ease;
+}
+.cart:hover{
+    cursor: pointer;
+    background-color: rgb(47, 64, 150);
+    color: white;
+}
+.profile:hover{
+    cursor: pointer;
+    background-color: rgb(47, 122, 150);
+    color: white;
+}
+
+.cart{
+    position: relative;
+}
+.cartNumber{
+    position: absolute;
+    top: -32%;
+    left: -13%;
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    text-align: center;
+    color: white;
+    background-color: rgb(65, 93, 119)
+}
+
+.cartNumber h6{
+
+   font-size: 0.8rem;
+   margin:0.3rem 0.2rem;
+}

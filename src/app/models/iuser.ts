@@ -4,5 +4,6 @@ export interface Iuser {
     useremail:string,
     password:string,
     rememberMe:boolean,
+    favoriets:[]
     
 }

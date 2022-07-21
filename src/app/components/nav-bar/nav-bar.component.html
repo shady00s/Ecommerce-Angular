@@ -23,5 +23,24 @@
           </div>
         </li>
       </ul>
+
+      
+    
+   
+  </div>
+  <div  class=" options">
+    <div class="cart">
+      <div class="cartNumber">
+      <h6 *ngIf="index > 100 "> 99+</h6>
+      <h6 *ngIf="index < 100 "> {{index}}</h6>
+      </div>
+       <i class="fa-solid fa-cart-shopping"></i>
+      cart
     </div>
+
+    <div class="profile">
+      <i class="fa-solid fa-user"></i>
+      shady
+    </div>
+  </div>
   </nav>

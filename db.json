@@ -5,6 +5,7 @@
       "useremail": "ssk@test.com",
       "password": "12345678",
       "rememberMe": true,
+      "favorites":[],
       "id": 1
     }
   ]
