@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   usersApiUrl:'http://localhost:5000/users',
   productsApi:'https://fakestoreapi.com/products',
+  singleProductApi:'https://fakestoreapi.com/product',
   categoriesApi:'https://fakestoreapi.com/products/categories'
 };
 

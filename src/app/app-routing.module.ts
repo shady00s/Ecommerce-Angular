@@ -7,8 +7,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { CartComponent } from './components/main-master/cart/cart.component';
 
 const routes: Routes = [
-  {path:'',component:HomepageComponent ,canActivate:[UserAuthenticationGuard]},
-  {path:'cart',component:CartComponent},
+  {path:'',component:HomepageComponent },
+  {path:'cart',component:CartComponent,canActivate:[UserAuthenticationGuard]},
   {path:'login',component:LogInComponent},
   {path:'register',component:RegisterComponent}
 ];

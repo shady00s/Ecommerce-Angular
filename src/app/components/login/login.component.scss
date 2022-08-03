@@ -1,0 +1,21 @@
+.logInContainer{
+    height: 15rem;
+    width:13rem;
+    margin:5rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rememberMeContainer{
+    display: flex; 
+    justify-content: space-between;
+    width: 14rem;
+}
+
+.title{
+    position: relative;
+    top: 2rem;
+    left: 20%;
+}

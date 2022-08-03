@@ -28,7 +28,7 @@ export class LoginService {
     else { return false }
   }
 
-  public saveLogInData(location: string) {
+  public saveLogInData(location: string,userName:string) {
 
     let tooken: number = Math.random() * 1000
     if (location === 'local') {

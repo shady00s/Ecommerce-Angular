@@ -1,9 +1,22 @@
+<app-nav-bar></app-nav-bar>
 
-    <input type="text" placeholder="Email:" [(ngModel)]="email">
-    <input type="password" placeholder="Password:" [(ngModel)]="password">
-    <input type="checkbox" name="remember" id="remember" [(ngModel)]="rememberMe">
-    <label for="remember" >Remember me </label>
-
+<h2 class="title">Log-in</h2>
+<div class="logInContainer">
+    <input  class="form-control" type="text" placeholder="Email:" [(ngModel)]="email">
+    <input  class="form-control" type="password" placeholder="Password:" [(ngModel)]="password">
+   
+   <div class="rememberMeContainer">
+    <div class="rememberContainer">
+        <input type="checkbox" name="remember" id="remember" [(ngModel)]="rememberMe">
+        <label for="remember" >Remember me </label>
+    </div>
+    
     <a routerLink="/register">New user?</a>
+   </div>
+   
 
-<button (click)="(test())"  >Log-in</button>
+ 
+
+    <button class="btn btn-dark" (click)="(test())"  >Log-in</button>
+</div>
+

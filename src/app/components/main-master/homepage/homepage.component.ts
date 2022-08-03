@@ -11,10 +11,10 @@ export class HomepageComponent implements OnInit ,OnChanges ,AfterViewChecked{
   productsData:Iproducts[]=[]
   constructor(private getProductService:ProductsService) { }
   ngAfterViewChecked(): void {
-    console.log(this.productsData)
+    //console.log(this.productsData)
   }
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.productsData)
+    //console.log(this.productsData)
   }
 
   ngOnInit(): void {

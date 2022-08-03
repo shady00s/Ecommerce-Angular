@@ -2,26 +2,32 @@
 <div class="cartBody">
     <div class="productList">
         <h1 style="text-align: center; margin-bottom: 1rem;">My Cart</h1>
-        <div class="productContainer">
-            <div class="productComandAndInfoContainer">
-                <div class="productDetails">
-                    <img src="assets/horus.png" alt="">
-                    <span class="product-name">Product name</span>
-                    <span >price: <span class="product-name">23 LE</span></span>
-                    <span><i style="color: gold;" class="fa-solid fa-star"></i> <span>3.5</span></span>
-                    <span>Quantity :<span class="product-name"> 1 Unit/Pice</span></span>
-                    <div class="quantityButtonsContainer">
-                        <button class="quantityBtn"><i style="color: white;" class="fa-solid fa-add"></i></button>
-                        <input value="1" style="width: 25%; text-align: center;" type="number">
-                        <button class="quantityBtn"><i style="color: white;" class="fa-solid fa-minus"></i></button>
+        
+        <div *ngIf="!productsList.length " class="div"><h1>No itmes in the cart</h1></div>
+        <ng-container  *ngIf="productsList.length " >
+           
+            <div  class="productContainer" *ngFor="let product of productsList ;">
+                <div class="productComandAndInfoContainer">
+                    <div class="productDetails">
+                        <img src={{product.image}} alt="">
+                        <span class="product-name">{{product.title}}</span>
+                        <span >price: <span class="product-name">{{product.price}}</span></span>
+                        <span><i style="color: gold;" class="fa-solid fa-star"></i> {{product.rating}}<span></span></span>
+                        <span>Quantity :<span class="product-name"> {{product.rating[1]}}</span></span>
+                        <div class="quantityButtonsContainer">
+                            <button class="quantityBtn"><i style="color: white;" class="fa-solid fa-add"></i></button>
+                            <input value="1" style="width: 25%; text-align: center;" type="number">
+                            <button class="quantityBtn"><i style="color: white;" class="fa-solid fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <div class="commandsContainer" (click)="removeProduct(product.id)">
+                        <span><i style="color: red;" class="fa-solid fa-times"></i> Remove Product</span>
                     </div>
                 </div>
-                <div class="commandsContainer">
-                    <span><i style="color: red;" class="fa-solid fa-times"></i> Remove Product</span>
-                </div>
+                
             </div>
-            
-        </div>
+        </ng-container>
+        
     </div>
     <div class="priceAndSubmitContainer">
             <div class="promoCodeContainer ">

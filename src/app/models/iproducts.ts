@@ -5,5 +5,8 @@ export interface Iproducts {
     image:string,
     discription:string,
     category:string
-    rating:[]
+    rating:[
+        count:number,
+        rating:number
+    ]
 }

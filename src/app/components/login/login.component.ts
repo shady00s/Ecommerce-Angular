@@ -27,10 +27,10 @@ export class LogInComponent implements OnInit {
         console.log('exist')
         this.router.navigate(['/'])
         if (this.rememberMe) {
-          this.dataService.saveLogInData('local')
+          this.dataService.saveLogInData('local',resultUser[0].userName)
         }
         else {
-          this.dataService.saveLogInData('session')
+          this.dataService.saveLogInData('session',resultUser[0].userName)
         }
        
       }
