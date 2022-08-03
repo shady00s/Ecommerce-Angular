@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomepageAdvComponentComponent } from './components/homepage-adv-component/homepage-adv-component.component';
 import { ProductCardComponent } from './components/main-master/product-card/product-card.component';
 import { ProductDetailsComponent } from './components/main-master/product-details/product-details.component';
+import { CartDirective } from './directives/cart.directive';
+import { CartComponent } from './components/main-master/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ProductDetailsComponent } from './components/main-master/product-detail
     HomepageComponent,
     HomepageAdvComponentComponent,
     ProductCardComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartDirective,
+    CartComponent
     
   ],
   imports: [
