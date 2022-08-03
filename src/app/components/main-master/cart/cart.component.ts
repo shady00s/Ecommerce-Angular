@@ -12,18 +12,15 @@ export class CartComponent implements OnInit,AfterViewChecked {
  productsList: Iproducts[] =[]
  products :number[] = []
   constructor(private cartService:CartService,private cd:ChangeDetectorRef) { 
-
-
-
   }
   ngAfterViewChecked(): void {
     this.products = [...JSON.parse(localStorage.getItem('cart-items')!)]
-    console.log( this.productsList)
+    
     this.cd.detectChanges()
     
   }
   ngOnChanges(changes: SimpleChanges): void {
-
+    this.products = [...JSON.parse(localStorage.getItem('cart-items')!)]
   }
  
   ngOnInit(): void {
@@ -47,6 +44,9 @@ export class CartComponent implements OnInit,AfterViewChecked {
 
     localStorage.setItem('cart-items',JSON.stringify(newCart))
 
+    this.products = [...JSON.parse(localStorage.getItem('cart-items')!)]
+
+    this.productsList  = this.productsList.filter(e => e.id != id)
   }
 
 
