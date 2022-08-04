@@ -10,30 +10,42 @@ import { CartService } from './../../services/cart/cart.service';
 })
 export class NavBarComponent implements OnInit  ,AfterViewChecked{
   
-  x:number[] |undefined = []
+  x:number[] | null = []
   
-index:number = 0
+index:number  = 0
+logOut:boolean = false
+openLogOutPopup:boolean = false
 userName:string | null =""
   constructor(private router:Router,private cd:ChangeDetectorRef) {
-   
-    
-    
   
    }
+
+contianerPopUp (){
+  return this.openLogOutPopup = !this.openLogOutPopup
+}
+  
   ngAfterViewChecked(): void {
-    this.x =[... JSON.parse(localStorage.getItem("cart-items")!)] 
+    this.x =[... JSON.parse(localStorage.getItem("cart-items")|| '' )] 
     this.index = this.x.length
     this.cd.detectChanges()
   }
 
   ngOnInit(): void {
     
-    this.x =[... JSON.parse(localStorage.getItem("cart-items")!)] 
+    this.x =[... JSON.parse(localStorage.getItem("cart-items") || '' )] 
     this.index = this.x.length
    
   }
     
-  
+  logOutFunc(){
+   let log = confirm("Do u want to log-out ?")
+
+    if(log =true){
+
+      localStorage.removeItem('tooken')
+      this.router.navigate([''])
+    }
+  }
  
 
   loginVerificator(){
@@ -45,9 +57,11 @@ userName:string | null =""
     }
     else{
 
-      this.router.navigate([''])
+      
      let name = localStorage.getItem('user-name')
      this.userName = name
+      this.logOut = true
+      this.contianerPopUp()
     }
   }
 }

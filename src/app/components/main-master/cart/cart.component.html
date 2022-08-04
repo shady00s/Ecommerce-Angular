@@ -2,7 +2,7 @@
 <div class="cartBody">
     <div class="productList">
         <h1 style="text-align: center; margin-bottom: 1rem;">My Cart</h1>
-        
+
         <div *ngIf="!productsList.length " class="div"><h1>No itmes in the cart</h1></div>
         <ng-container  *ngIf="productsList.length " >
            
@@ -15,9 +15,9 @@
                         <span><i style="color: gold;" class="fa-solid fa-star"></i> {{product.rating}}<span></span></span>
                         <span>Quantity :<span class="product-name"> {{product.rating[1]}}</span></span>
                         <div class="quantityButtonsContainer">
-                            <button class="quantityBtn"><i style="color: white;" class="fa-solid fa-add"></i></button>
-                            <input value="1" style="width: 25%; text-align: center;" type="number">
-                            <button class="quantityBtn"><i style="color: white;" class="fa-solid fa-minus"></i></button>
+                            <button (click)="addProductPrice(product.id)" class="quantityBtn"><i style="color: white;" class="fa-solid fa-add"></i></button>
+                            <input  style="width: 25%; text-align: center;" type="number">
+                            <button (click)="removeProductPrice(product.id)" class="quantityBtn"><i style="color: white;" class="fa-solid fa-minus"></i></button>
                         </div>
                     </div>
                     <div class="commandsContainer" (click)="removeProduct(product.id)">
@@ -39,21 +39,21 @@
             </div>
             <div class="payContainer">
                 <div class="bill-info">
-                    <span class="bill-title">Total: </span>
-                    <h6 class="price">232 LE</h6>
+                    <span class="bill-title">Items Price: </span>
+                    <h6 class="price">{{itemsPrice}} LE</h6>
                 </div>
                 <div class="bill-info">
-                    <span class="bill-title">Total: </span>
-                    <h6 class="price">232 LE</h6>
+                    <span class="bill-title">Deleviry Fees: </span>
+                    <h6 class="price">{{delivaryPrice}} LE</h6>
                 </div>
                 <div class="bill-info">
-                    <span class="bill-title">Total: </span>
-                    <h6 class="price">232 LE</h6>
+                    <span class="bill-title">Discount value: </span>
+                    <h6 class="price">{{discountValue}} LE</h6>
                 </div>
                 <hr>
                 <div class="bill-info">
                     <span class="bill-title">Total: </span>
-                    <h6 class="price">232 LE</h6>
+                    <h6 class="price">{{totalPrice}} LE</h6>
                 </div>
                 
             </div>
